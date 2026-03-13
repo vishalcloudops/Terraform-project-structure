@@ -3,9 +3,9 @@
 # Add steps that build, run tests, deploy, and more:
 # https://aka.ms/yaml
 
-trigger:None 
+trigger: none 
 
-pool:Pipeline Agent
+pool: Pipeline Agent
 
 steps:
 - task: TerraformInstaller@1
@@ -14,5 +14,5 @@ steps:
 - task: TerraformTask@5
   inputs:
     provider: 'azurerm'
-    command: 'validate'
+    command: 'init'
     workingDirectory: '$(System.DefaultWorkingDirectory)azure_infra'
