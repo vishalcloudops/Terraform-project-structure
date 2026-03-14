@@ -8,10 +8,6 @@ trigger: none
 pool: Pipeline Agent
 
 steps:
-- task: PowerShell@2
-  inputs:
-    targetType: 'inline'
-    script: 'az login --service-principal -u 12f4888c-a08b-4773-9ae0-1a5b7d2142ed -p R9s8Q~6Z.5g3NlJ3PVEjE3yxKjLEhGnDe0CnqaGmT --tenant 5334631f-8fa6-4987-aa99-2fae94e92d83'
 - task: TerraformTask@5
   inputs:
     provider: 'azurerm'
