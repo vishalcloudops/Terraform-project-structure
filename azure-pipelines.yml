@@ -10,4 +10,8 @@ steps:
   inputs:
     provider: 'azurerm'
     command: 'init'
-    workingDirectory: '$(System.DefaultWorkingDirectory)azure_infra'
+    workingDirectory: '$(System.DefaultWorkingDirectory)/azure_infra'
+    backendServiceArm: 'connection'
+    backendAzureRmResourceGroupName: 'test1'
+    backendAzureRmStorageAccountName: 'badastore'
+    backendAzureRmContainerName: 'container'
